@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #555;
+    --secondary-color: #f7f7f7;
+    --bg-color-dark: #000;
+    --text-color-light: #fff;
+    --padding-large: 40px;
+    --padding-medium: 20px;
+    --padding-small: 10px;
+    --border-radius: 0;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --line-height: 1.6;
+}
+
+body {
+    font-family: "Arial", "Segoe UI", "Helvetica", sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    line-height: var(--line-height);
+}
+
+.header, footer {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-light);
+    padding: var(--padding-large);
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.header {
+    height: 150px;
+    position: relative;
+}
+
+.header h1 {
+    position: absolute;
+    bottom: 0;
+    right: var(--padding-small);
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.bio {
+    padding: var(--padding-large) var(--padding-medium);
+    margin-bottom: var(--padding-medium);
+}
+
+.bio-content, .app-content {
+    padding: var(--padding-large);
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.app-section {
+    padding: var(--padding-large) var(--padding-medium);
+}
+
+.app-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--padding-large);
+}
+
+.app-content:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    margin-right: var(--padding-medium);
+}
+
+.app-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.app-subtitle {
+    font-size: 1.2em;
+    color: gray;
+    margin-bottom: var(--padding-medium);
+}
+
+.app-screenshot {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    border-radius: var(--border-radius);
+    min-width: 200px;
+    padding: var(--padding-medium);
+}
+
+.app-content > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.app-description {
+    color: var(--primary-color);
+    margin-top: var(--padding-medium);
+}
+
+.app-text {
+    max-width: 50%;
+}
+
+.app-store-badge {
+    margin-top: var(--padding-medium);
+    display: inline-block;
+}
+
+footer {
+    margin-top: var(--padding-large);
+    text-align: center;
+}
+
+footer a {
+    color: var(--text-color-light);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .app-text {
+        max-width: 100%;
+        font-size: 0.9em;
+    }
+
+    .app-content > div:last-child {
+        width: 100%;
+        margin-top: var(--padding-medium);
+    }
+}
